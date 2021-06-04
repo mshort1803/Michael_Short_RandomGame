@@ -7,6 +7,7 @@ echo       Guessing Game
 echo   Made by Michael Short
 echo =========================
 
+
 echo Please enter a number that is greater than 1
 read input
 

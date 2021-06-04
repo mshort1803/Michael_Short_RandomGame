@@ -3,10 +3,11 @@
 echo 
  
  
-randomVar=$[RANDOM%$1+1]
+randomVar=$1
 
-echo $randomVar
-until [[ guess -eq $randomVar ]]; do
+echo Pick a number between 1 and $randomVar
+
+until [[ $guess -eq $randomVar ]]; do
 	read guess
 
 	if [[ $guess -lt $randomVar ]]; then
@@ -17,6 +18,8 @@ until [[ guess -eq $randomVar ]]; do
 done
 
 Echo Correct!
+
+echo $randomVar
 
 ./a.out $randomVar
 
